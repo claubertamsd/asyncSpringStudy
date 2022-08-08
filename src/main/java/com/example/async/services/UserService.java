@@ -26,4 +26,12 @@ public class UserService {
     public CompletableFuture<User> save(User user){
         return CompletableFuture.completedFuture(userRepository.save(user));
     }
+
+    public CompletableFuture<User> update (User user){
+        return CompletableFuture.completedFuture(userRepository.save(user));
+    }
+    public CompletableFuture<Optional<User>> delete (Long id){
+         userRepository.deleteById(id);
+         return null;
+    }
 }

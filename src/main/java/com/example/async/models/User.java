@@ -3,13 +3,15 @@ package com.example.async.models;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "TB_USERS")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
-    @Column
+    @Column(name = "user_name")
     private String name;
-    @Column
+    @Column(name = "user_email")
     private String email;
 
     public User(){
